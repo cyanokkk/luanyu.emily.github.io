@@ -1,0 +1,3631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Yu Luan | Wuhan University School of Law">
+<title>Yu Luan | Legal Profile</title>
+
+<style>
+/* =========================================================
+   BASIC
+   ========================================================= */
+
+:root {
+    --teal: #0b6f70;
+    --teal-dark: #164c4d;
+    --teal-light: #dceaea;
+
+    --paper: #f5f6f2;
+    --white: #ffffff;
+
+    --ink: #1f2929;
+    --muted: #687576;
+
+    --line: #cbd8d6;
+
+    --max-width: 1320px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family:
+        "Helvetica Neue",
+        Arial,
+        "PingFang SC",
+        "Microsoft YaHei",
+        sans-serif;
+
+    background: var(--paper);
+    color: var(--ink);
+    overflow-x: hidden;
+}
+
+button,
+a {
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 86px;
+
+    z-index: 100;
+
+    background: rgba(245, 246, 242, 0.96);
+
+    backdrop-filter: blur(8px);
+
+    border-bottom: 1px solid rgba(22, 76, 77, 0.14);
+}
+
+.header-inner {
+    height: 100%;
+
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 0 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+
+/* LOGO */
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    cursor: pointer;
+
+    min-width: max-content;
+}
+
+.brand-mark {
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid var(--teal);
+
+    color: var(--teal-dark);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 15px;
+
+    letter-spacing: 0.06em;
+}
+
+.brand-text strong {
+    display: block;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.08em;
+}
+
+.brand-text small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+
+/* NAV */
+
+.top-nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    margin-left: auto;
+}
+
+.nav-btn {
+    position: relative;
+
+    border: 0;
+
+    background: transparent;
+
+    padding: 10px 0 8px;
+
+    color: #536162;
+
+    font-size: 11px;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+.nav-btn::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 100%;
+
+    bottom: 2px;
+
+    height: 1px;
+
+    background: var(--teal);
+
+    transition: 0.28s ease;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    color: var(--ink);
+}
+
+.nav-btn:hover::after,
+.nav-btn.active::after {
+    right: 0;
+}
+
+
+/* LANGUAGE */
+
+.lang-switch {
+    min-width: 62px;
+    height: 34px;
+
+    padding: 0 10px;
+
+    border: 1px solid var(--teal-dark);
+
+    background: transparent;
+
+    color: var(--teal-dark);
+
+    font-size: 11px;
+
+    letter-spacing: 0.10em;
+}
+
+.menu-toggle {
+    display: none;
+
+    border: 0;
+
+    background: transparent;
+
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   PAGE SYSTEM
+   ========================================================= */
+
+main {
+    min-height: 100vh;
+
+    padding-top: 86px;
+}
+
+.page {
+    display: none;
+
+    min-height: calc(100vh - 86px);
+
+    animation: pageIn 0.36s ease both;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes pageIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.page-wrap {
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 64px 34px 54px;
+}
+
+
+/* =========================================================
+   GENERAL TYPOGRAPHY
+   ========================================================= */
+
+.kicker {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 24px;
+
+    color: var(--teal);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.kicker::before {
+    content: "";
+
+    width: 36px;
+    height: 1px;
+
+    background: var(--teal);
+}
+
+.display {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight: 400;
+
+    letter-spacing: -0.03em;
+
+    color: var(--teal-dark);
+}
+
+.em {
+    color: var(--teal-dark);
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   HOME
+   ========================================================= */
+
+.home-grid {
+    min-height: calc(100vh - 86px);
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(360px, 0.95fr)
+        minmax(480px, 1.25fr);
+}
+
+
+/* LEFT */
+
+.portrait-panel {
+    min-height: calc(100vh - 86px);
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: center;
+
+    background: var(--teal-dark);
+}
+
+.portrait-panel::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 22% 18%,
+            rgba(255, 255, 255, 0.12),
+            transparent 30%
+        );
+}
+
+.portrait-caption {
+    position: absolute;
+
+    top: 34px;
+    left: 34px;
+
+    z-index: 2;
+
+    color: #dcebea;
+
+    font-size: 10px;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+}
+
+
+/* 照片框整体上移 */
+
+.portrait-frame {
+    width: min(72%, 460px);
+
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    background: white;
+
+    margin-bottom: 36px;
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+
+/* 人物在照片框中轻微上移 */
+
+.portrait-frame img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center 32%;
+
+    transform: scale(1.03);
+}
+
+
+/* RIGHT */
+
+.home-copy {
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        70px
+        clamp(36px, 6vw, 92px);
+}
+
+.home-copy-inner {
+    max-width: 710px;
+}
+
+.home-copy .display {
+    font-size:
+        clamp(64px, 7.2vw, 114px);
+
+    line-height: 0.89;
+}
+
+.cn-name {
+    margin-top: 14px;
+
+    color: var(--teal);
+
+    font-size: 20px;
+
+    letter-spacing: 0.34em;
+}
+
+.role {
+    margin-top: 34px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: #304041;
+
+    font-size: 22px;
+
+    line-height: 1.55;
+}
+
+
+/* META */
+
+.home-meta {
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    border-top: 1px solid var(--line);
+
+    border-bottom: 1px solid var(--line);
+}
+
+.meta-item {
+    padding: 18px 18px 18px 0;
+}
+
+.meta-item:nth-child(2) {
+    padding-left: 24px;
+
+    border-left: 1px solid var(--line);
+}
+
+.meta-label {
+    margin-bottom: 7px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+.meta-value {
+    font-size: 14px;
+
+    line-height: 1.55;
+}
+
+
+/* BUTTONS */
+
+.home-actions {
+    margin-top: 30px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.action {
+    padding: 12px 18px;
+
+    border: 1px solid var(--teal-dark);
+
+    background: transparent;
+
+    font-size: 11px;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    transition: 0.2s ease;
+}
+
+.action.primary {
+    background: var(--teal-dark);
+
+    color: white;
+}
+
+.action:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 18px
+        rgba(22, 76, 77, 0.10);
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.section-head {
+    display: grid;
+
+    grid-template-columns:
+        190px 1fr;
+
+    gap: 44px;
+
+    padding-bottom: 30px;
+
+    margin-bottom: 36px;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.section-index {
+    color: var(--teal);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 15px;
+
+    letter-spacing: 0.08em;
+}
+
+.section-head .display {
+    font-size:
+        clamp(48px, 5vw, 82px);
+
+    line-height: 0.96;
+}
+
+.section-intro {
+    max-width: 760px;
+
+    margin-top: 18px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   ENTRIES
+   ========================================================= */
+
+.split-list {
+    display: grid;
+
+    grid-template-columns:
+        260px 1fr;
+
+    gap: 42px;
+}
+
+.side-label {
+    position: sticky;
+
+    top: 124px;
+
+    align-self: start;
+
+    padding-top: 7px;
+
+    color: var(--teal);
+
+    font-size: 11px;
+
+    letter-spacing: 0.16em;
+
+    line-height: 1.7;
+
+    text-transform: uppercase;
+}
+
+.entries {
+    border-top: 1px solid var(--line);
+}
+
+.entry {
+    display: grid;
+
+    grid-template-columns:
+        minmax(190px, 0.42fr)
+        1fr;
+
+    gap: 34px;
+
+    padding: 30px 0;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.entry-title {
+    color: var(--teal-dark);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 22px;
+
+    line-height: 1.25;
+}
+
+.entry-sub {
+    margin-top: 9px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+.entry-body {
+    color: #2f3a3b;
+
+    font-size: 14px;
+
+    line-height: 1.78;
+}
+
+.entry-body p {
+    margin: 0 0 12px;
+}
+
+.entry-body p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   EDUCATION
+   ========================================================= */
+
+.education-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 24px;
+}
+
+.edu-card {
+    min-height: 250px;
+
+    padding: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.56);
+
+    border: 1px solid var(--line);
+}
+
+.edu-card h3 {
+    margin: 0 0 9px;
+
+    color: var(--teal-dark);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 26px;
+
+    font-weight: 400;
+}
+
+.edu-card .date {
+    margin-bottom: 22px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+.fact-row {
+    display: grid;
+
+    grid-template-columns:
+        130px 1fr;
+
+    gap: 18px;
+
+    padding: 13px 0;
+
+    border-top:
+        1px solid #dbe3e1;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.fact-label {
+    color: var(--muted);
+
+    font-size: 10px;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+/* SKILLS */
+
+.skills-bar {
+    margin-top: 24px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    border-top: 1px solid var(--line);
+
+    border-bottom: 1px solid var(--line);
+}
+
+.skill-block {
+    min-height: 128px;
+
+    padding:
+        24px 24px 24px 0;
+}
+
+.skill-block + .skill-block {
+    padding-left: 24px;
+
+    border-left: 1px solid var(--line);
+}
+
+.skill-block h4 {
+    margin: 0 0 12px;
+
+    color: var(--teal);
+
+    font-size: 11px;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+.skill-block p {
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-layout {
+    min-height:
+        calc(100vh - 214px);
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr 0.9fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.contact-big {
+    color: var(--teal-dark);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(52px, 6vw, 94px);
+
+    line-height: 0.96;
+}
+
+.contact-note {
+    max-width: 620px;
+
+    margin-top: 26px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+.contact-card {
+    padding-top: 18px;
+
+    border-top:
+        1px solid var(--teal-dark);
+}
+
+.contact-row {
+    display: grid;
+
+    grid-template-columns:
+        110px 1fr;
+
+    gap: 24px;
+
+    padding: 17px 0;
+
+    border-bottom:
+        1px solid var(--line);
+}
+
+.contact-row > span:first-child {
+    color: var(--muted);
+
+    font-size: 10px;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+.contact-row > span:last-child {
+    font-size: 14px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer-note {
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding:
+        0 34px 28px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #7a8585;
+
+    font-size: 10px;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   LANGUAGE
+   ========================================================= */
+
+[data-lang="zh"] {
+    display: none;
+}
+
+body.zh [data-lang="en"] {
+    display: none !important;
+}
+
+body.zh [data-lang="zh"] {
+    display: revert;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .top-nav {
+        gap: 14px;
+    }
+
+    .nav-btn {
+        font-size: 10px;
+    }
+
+    .home-grid {
+        grid-template-columns:
+            0.85fr 1.15fr;
+    }
+
+    .section-head {
+        grid-template-columns:
+            120px 1fr;
+    }
+
+    .split-list {
+        grid-template-columns:
+            170px 1fr;
+    }
+
+    .entry {
+        grid-template-columns:
+            210px 1fr;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .site-header {
+        height: 72px;
+    }
+
+    .header-inner {
+        padding: 0 20px;
+    }
+
+    .top-nav {
+        display: none;
+
+        position: absolute;
+
+        top: 72px;
+        left: 0;
+        right: 0;
+
+        padding:
+            16px 20px 22px;
+
+        background: var(--paper);
+
+        border-bottom:
+            1px solid var(--line);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 4px;
+    }
+
+    .top-nav.open {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .lang-switch {
+        margin-left: auto;
+    }
+
+    main {
+        padding-top: 72px;
+    }
+
+    .page {
+        min-height:
+            calc(100vh - 72px);
+    }
+
+    .home-grid {
+        display: block;
+    }
+
+    .portrait-panel {
+        min-height: 52vh;
+
+        padding-top: 30px;
+
+        align-items: flex-end;
+    }
+
+    .portrait-frame {
+        width:
+            min(68%, 380px);
+
+        margin-bottom: 18px;
+    }
+
+    .portrait-frame img {
+        object-position: center 32%;
+    }
+
+    .home-copy {
+        padding:
+            50px 28px 58px;
+    }
+
+    .home-copy .display {
+        font-size: 64px;
+    }
+
+    .page-wrap {
+        padding:
+            48px 24px 42px;
+    }
+
+    .section-head {
+        display: block;
+    }
+
+    .section-index {
+        margin-bottom: 18px;
+    }
+
+    .split-list {
+        display: block;
+    }
+
+    .side-label {
+        position: static;
+
+        margin-bottom: 15px;
+    }
+
+    .entry {
+        grid-template-columns:
+            1fr;
+
+        gap: 14px;
+    }
+
+    .education-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .skills-bar {
+        grid-template-columns:
+            1fr;
+    }
+
+    .skill-block + .skill-block {
+        padding-left: 0;
+
+        border-left: 0;
+
+        border-top:
+            1px solid var(--line);
+    }
+
+    .contact-layout {
+        grid-template-columns:
+            1fr;
+
+        gap: 42px;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .brand-text small {
+        display: none;
+    }
+
+    .brand-text strong {
+        font-size: 15px;
+    }
+
+    .brand-mark {
+        width: 30px;
+        height: 30px;
+    }
+
+    .home-copy .display {
+        font-size: 54px;
+    }
+
+    .home-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .meta-item:nth-child(2) {
+        padding-left: 0;
+
+        border-left: 0;
+
+        border-top:
+            1px solid var(--line);
+    }
+
+    .section-head .display {
+        font-size: 46px;
+    }
+
+    .portrait-frame {
+        width: 76%;
+        margin-bottom: 16px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+        <div
+            class="brand"
+            data-page-target="home"
+        >
+
+            <div class="brand-mark">
+                YL
+            </div>
+
+            <div class="brand-text">
+
+                <strong>
+                    YU LUAN
+                </strong>
+
+                <small>
+                    Legal Profile
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav
+            class="top-nav"
+            id="topNav"
+        >
+
+            <button
+                class="nav-btn active"
+                data-page-target="home"
+            >
+                <span data-lang="en">
+                    Profile
+                </span>
+
+                <span data-lang="zh">
+                    首页
+                </span>
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-page-target="experience"
+            >
+                <span data-lang="en">
+                    Experience
+                </span>
+
+                <span data-lang="zh">
+                    实务经历
+                </span>
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-page-target="research"
+            >
+                <span data-lang="en">
+                    Research
+                </span>
+
+                <span data-lang="zh">
+                    法律研究
+                </span>
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-page-target="education"
+            >
+                <span data-lang="en">
+                    Education
+                </span>
+
+                <span data-lang="zh">
+                    教育背景
+                </span>
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-page-target="activities"
+            >
+                <span data-lang="en">
+                    Activities
+                </span>
+
+                <span data-lang="zh">
+                    实践经历
+                </span>
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-page-target="contact"
+            >
+                <span data-lang="en">
+                    Contact
+                </span>
+
+                <span data-lang="zh">
+                    联系
+                </span>
+            </button>
+
+        </nav>
+
+
+        <button
+            class="lang-switch"
+            id="langSwitch"
+        >
+            中文
+        </button>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+        >
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =====================================================
+     HOME
+     ===================================================== -->
+
+<section
+    class="page active"
+    id="home"
+>
+
+    <div class="home-grid">
+
+
+        <!-- PHOTO -->
+
+        <div class="portrait-panel">
+
+
+            <div class="portrait-caption">
+
+                <span data-lang="en">
+                    Wuhan University · School of Law
+                </span>
+
+                <span data-lang="zh">
+                    武汉大学 · 法学院
+                </span>
+
+            </div>
+
+
+            <div class="portrait-frame">
+
+                <img
+                    src="证件照.png"
+                    alt="Yu Luan"
+                >
+
+            </div>
+
+
+        </div>
+
+
+        <!-- PROFILE -->
+
+        <div class="home-copy">
+
+
+            <div class="home-copy-inner">
+
+
+                <div class="kicker">
+
+                    <span data-lang="en">
+                        Legal Profile
+                    </span>
+
+                    <span data-lang="zh">
+                        个人法律主页
+                    </span>
+
+                </div>
+
+
+                <h1 class="display">
+                    YU
+                    <br>
+                    LUAN
+                </h1>
+
+
+                <div class="cn-name">
+                    栾 宇
+                </div>
+
+
+                <div class="role">
+
+                    <span data-lang="en">
+
+                        Wuhan University School of Law
+                        <br>
+
+                        International Law Experimental Program
+
+                    </span>
+
+
+                    <span data-lang="zh">
+
+                        武汉大学法学院
+                        <br>
+
+                        法学（国际法实验班）
+
+                    </span>
+
+                </div>
+
+
+                <div class="home-meta">
+
+
+                    <div class="meta-item">
+
+
+                        <div class="meta-label">
+
+                            <span data-lang="en">
+                                Focus
+                            </span>
+
+                            <span data-lang="zh">
+                                关注领域
+                            </span>
+
+                        </div>
+
+
+                        <div class="meta-value">
+
+                            <span data-lang="en">
+                                Legal Research ·
+                                International Law ·
+                                TMT
+                            </span>
+
+                            <span data-lang="zh">
+                                法律研究 ·
+                                国际法 ·
+                                TMT
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="meta-item">
+
+
+                        <div class="meta-label">
+
+                            <span data-lang="en">
+                                Expected Graduation
+                            </span>
+
+                            <span data-lang="zh">
+                                预计毕业
+                            </span>
+
+                        </div>
+
+
+                        <div class="meta-value">
+
+                            <span data-lang="en">
+                                June 2028
+                            </span>
+
+                            <span data-lang="zh">
+                                2028 年 6 月
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="home-actions">
+
+
+                    <button
+                        class="action primary"
+                        data-page-target="experience"
+                    >
+
+                        <span data-lang="en">
+                            View Experience
+                        </span>
+
+                        <span data-lang="zh">
+                            查看实务经历
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="action"
+                        data-page-target="research"
+                    >
+
+                        <span data-lang="en">
+                            View Research
+                        </span>
+
+                        <span data-lang="zh">
+                            查看法律研究
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPERIENCE
+     ===================================================== -->
+
+<section
+    class="page"
+    id="experience"
+>
+
+    <div class="page-wrap">
+
+
+        <div class="section-head">
+
+
+            <div class="section-index">
+                01 — EXPERIENCE
+            </div>
+
+
+            <div>
+
+
+                <div class="kicker">
+
+                    <span data-lang="en">
+                        Legal Practice
+                    </span>
+
+                    <span data-lang="zh">
+                        法律实务
+                    </span>
+
+                </div>
+
+
+                <h2 class="display">
+
+                    <span data-lang="en">
+                        Experience
+                    </span>
+
+                    <span data-lang="zh">
+                        实务经历
+                    </span>
+
+                </h2>
+
+
+                <div class="section-intro">
+
+                    <span data-lang="en">
+                        Selected matters reflecting
+                        evidence analysis,
+                        issue spotting
+                        and client-oriented legal work.
+                    </span>
+
+                    <span data-lang="zh">
+                        围绕证据梳理、争议焦点识别
+                        与客户需求分析的代表性法律实务经历。
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="split-list">
+
+
+            <div class="side-label">
+
+                <span data-lang="en">
+
+                    Heilongjiang Meng Fanxu Law Firm
+                    <br>
+
+                    Legal Intern · Aug 2026
+
+                </span>
+
+
+                <span data-lang="zh">
+
+                    黑龙江孟繁旭律师事务所
+                    <br>
+
+                    律师助理实习生 · 2026.08
+
+                </span>
+
+            </div>
+
+
+
+            <div class="entries">
+
+
+                <article class="entry">
+
+
+                    <div>
+
+
+                        <div class="entry-title">
+
+                            <span data-lang="en">
+                                Private Lending Dispute
+                            </span>
+
+                            <span data-lang="zh">
+                                大额民间借贷纠纷
+                            </span>
+
+                        </div>
+
+
+                        <div class="entry-sub">
+
+                            <span data-lang="en">
+                                Evidence Review · Litigation Support
+                            </span>
+
+                            <span data-lang="zh">
+                                证据审查 · 诉讼支持
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="entry-body">
+
+
+                        <p data-lang="en">
+
+                            Reorganized evidence around
+                            key elements including capacity,
+                            agreement to lend
+                            and actual disbursement.
+
+                            <span class="em">
+                                Reconciled approximately
+                                RMB 100 million
+                                in transactions spanning ten years
+                            </span>
+
+                            against accounting vouchers,
+                            bank statements and receipts.
+
+                        </p>
+
+
+                        <p data-lang="en">
+
+                            Identified evidentiary gaps,
+                            anticipated challenges
+                            from opposing counsel
+                            and prepared the first draft
+                            of an evidence index.
+
+                        </p>
+
+
+                        <p data-lang="zh">
+
+                            围绕主体资格、
+                            借贷合意及款项交付等要件事实
+                            重新组织证据，
+
+                            <span class="em">
+                                逐笔核对十年间
+                                合计约一亿元转账
+                            </span>
+
+                            ，整理记账凭证、
+                            银行流水及收据。
+
+                        </p>
+
+
+                        <p data-lang="zh">
+
+                            从对方代理人视角预判质证意见，
+                            排查证据缺口，
+                            并完成证据目录初稿。
+
+                        </p>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+                <article class="entry">
+
+
+                    <div>
+
+
+                        <div class="entry-title">
+
+                            <span data-lang="en">
+                                Construction Contract Dispute
+                            </span>
+
+                            <span data-lang="zh">
+                                猪舍建造合同纠纷
+                            </span>
+
+                        </div>
+
+
+                        <div class="entry-sub">
+
+                            <span data-lang="en">
+                                Witness Review ·
+                                Pleadings ·
+                                Hearing
+                            </span>
+
+                            <span data-lang="zh">
+                                证人梳理 ·
+                                文书准备 ·
+                                庭审
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="entry-body">
+
+
+                        <p data-lang="en">
+
+                            Reviewed the identities
+                            and anticipated testimony
+                            of 10 witnesses
+                            and distilled issues concerning
+                            construction quality,
+                            payment settlement
+                            and project delay.
+
+                        </p>
+
+
+                        <p data-lang="en">
+
+                            Assisted with the first draft
+                            of a
+
+                            <span class="em">
+                                counterclaim
+                                and evidentiary objections
+                            </span>
+
+                            , prepared pre-hearing
+                            evidence materials
+                            and attended
+                            a basic-level people's court hearing.
+
+                        </p>
+
+
+                        <p data-lang="zh">
+
+                            梳理 10 名证人的身份信息
+                            及证言要点，
+                            归纳工程质量、
+                            工程款结算及工期延误
+                            三项争议焦点。
+
+                        </p>
+
+
+                        <p data-lang="zh">
+
+                            在律师指导下完成
+
+                            <span class="em">
+                                反诉状及质证意见初稿
+                            </span>
+
+                            、庭前证据准备，
+                            并跟随参加基层法院庭审。
+
+                        </p>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+                <article class="entry">
+
+
+                    <div>
+
+
+                        <div class="entry-title">
+
+                            <span data-lang="en">
+                                Family Law Consultation
+                            </span>
+
+                            <span data-lang="zh">
+                                婚姻家事法律咨询
+                            </span>
+
+                        </div>
+
+
+                        <div class="entry-sub">
+
+                            <span data-lang="en">
+                                Fact-finding ·
+                                Client Objectives ·
+                                Risk Assessment
+                            </span>
+
+                            <span data-lang="zh">
+                                事实梳理 ·
+                                客户诉求 ·
+                                风险评估
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="entry-body">
+
+
+                        <p data-lang="en">
+
+                            Supported a consultation involving
+                            domestic violence,
+                            divorce
+                            and marital property division.
+
+                            Used structured questioning
+                            to identify material facts,
+                            evidence
+                            and client objectives
+                            while maintaining
+                            professional objectivity.
+
+                        </p>
+
+
+                        <p data-lang="en">
+
+                            Compared potential courses
+                            of action in terms of
+                            time and economic costs,
+                            prospects of success
+                            and enforcement risk.
+
+                        </p>
+
+
+                        <p data-lang="zh">
+
+                            参与家庭暴力、
+                            离婚及夫妻财产纠纷客户咨询，
+                            通过结构化提问识别
+                            核心事实、证据与客户诉求，
+                            同时保持专业客观判断。
+
+                        </p>
+
+
+                        <p data-lang="zh">
+
+                            协助比较不同解决路径的
+                            时间成本、经济成本、
+                            胜诉可能性及执行风险。
+
+                        </p>
+
+
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RESEARCH
+     ===================================================== -->
+
+<section
+    class="page"
+    id="research"
+>
+
+    <div class="page-wrap">
+
+
+        <div class="section-head">
+
+
+            <div class="section-index">
+                02 — RESEARCH
+            </div>
+
+
+            <div>
+
+
+                <div class="kicker">
+
+                    <span data-lang="en">
+                        International Law & Legal Research
+                    </span>
+
+                    <span data-lang="zh">
+                        国际法与法律研究
+                    </span>
+
+                </div>
+
+
+                <h2 class="display">
+
+                    <span data-lang="en">
+                        Research
+                    </span>
+
+                    <span data-lang="zh">
+                        法律研究
+                    </span>
+
+                </h2>
+
+
+                <div class="section-intro">
+
+                    <span data-lang="en">
+                        English-language legal research,
+                        memorial writing
+                        and academic projects spanning
+                        public international law,
+                        online contracting
+                        and comparative law.
+                    </span>
+
+                    <span data-lang="zh">
+                        涵盖国际法、
+                        网络交易与比较法议题的
+                        英文法律检索、
+                        书状写作与学术研究经历。
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="entries">
+
+
+            <article class="entry">
+
+
+                <div>
+
+
+                    <div class="entry-title">
+
+                        Philip C. Jessup
+                        International Law
+                        Moot Court Competition
+
+                    </div>
+
+
+                    <div class="entry-sub">
+
+                        <span data-lang="en">
+                            Wuhan University
+                            School of Law Team Member
+                            · Aug 2026 — Present
+                        </span>
+
+                        <span data-lang="zh">
+                            武汉大学法学院代表队成员
+                            · 2026.08 — 至今
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="entry-body">
+
+
+                    <p data-lang="en">
+
+                        <span class="em">
+                            Research and draft
+                            memorial submissions
+                            for Issues 3 and 4
+                        </span>
+
+                        , covering state responsibility
+                        and standing,
+                        territorial sovereignty,
+                        innocent passage
+                        and the duty to render assistance at sea;
+
+                        develop arguments
+                        for both Applicant
+                        and Respondent.
+
+                    </p>
+
+
+                    <p data-lang="en">
+
+                        Conduct English-language research
+                        using
+
+                        <span class="em">
+                            HeinOnline
+                            and Google Scholar
+                        </span>
+
+                        , drawing on ICJ/ITLOS jurisprudence,
+                        treaties
+                        and secondary authorities;
+
+                        completed the first draft
+                        of assigned memorial sections.
+
+                    </p>
+
+
+                    <p data-lang="zh">
+
+                        <span class="em">
+                            负责 Issue 3、
+                            Issue 4 的法律研究与书状准备
+                        </span>
+
+                        ，围绕国家责任、
+                        诉讼资格、
+                        领海主权、
+                        无害通过
+                        及海上救助义务等问题
+                        搭建双方论证框架。
+
+                    </p>
+
+
+                    <p data-lang="zh">
+
+                        使用
+
+                        <span class="em">
+                            HeinOnline、
+                            Google Scholar
+                        </span>
+
+                        开展英文法律检索，
+                        查阅分析 ICJ、
+                        ITLOS 判例、
+                        国际公约及学术资料；
+
+                        已完成负责部分书状初稿。
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <article class="entry">
+
+
+                <div>
+
+
+                    <div class="entry-title">
+
+                        <span data-lang="en">
+                            16th Wuhan University
+                            “Ziqiang Cup”
+                            Academic Competition
+                        </span>
+
+                        <span data-lang="zh">
+                            武汉大学第十六届
+                            “自强杯”
+                            大学生课外学术科技作品竞赛
+                        </span>
+
+                    </div>
+
+
+                    <div class="entry-sub">
+                        2025
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="entry-body">
+
+
+                    <p data-lang="en">
+
+                        <span class="em">
+                            Second Prize —
+                            Online Standard Terms:
+                        </span>
+
+                        analyzed case law
+                        on the visibility
+                        and readability
+                        of online standard terms
+                        and businesses' duties
+                        to draw attention to
+                        and explain such terms,
+
+                        with a focus
+                        on compliance implications.
+
+                    </p>
+
+
+                    <p data-lang="en">
+
+                        <span class="em">
+                            Third Prize —
+                            Contracts Induced by Fraud:
+                        </span>
+
+                        compared legal consequences
+                        across jurisdictions,
+
+                        analyzed foreign-law sources
+
+                        and examined
+                        Chinese judicial practice
+                        through doctrinal
+                        and field research.
+
+                    </p>
+
+
+                    <p data-lang="zh">
+
+                        <span class="em">
+                            二等奖 —
+                            网络格式条款：
+                        </span>
+
+                        围绕网络格式条款的
+                        可见性与可读性
+                        开展案例检索
+                        与裁判规则梳理，
+
+                        分析经营者提示说明义务
+                        在网络交易场景中的
+                        适用及合规问题。
+
+                    </p>
+
+
+                    <p data-lang="zh">
+
+                        <span class="em">
+                            三等奖 —
+                            欺诈订立合同：
+                        </span>
+
+                        开展比较法研究，
+                        检索域外合同法著作
+                        与一手资料，
+
+                        并结合国内裁判实践
+                        及实地调研
+                        分析相关规则的适用问题。
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <article class="entry">
+
+
+                <div>
+
+
+                    <div class="entry-title">
+
+                        <span data-lang="en">
+                            Congfa Cup ·
+                            Cultural Heritage
+                            Public Interest Litigation
+                        </span>
+
+                        <span data-lang="zh">
+                            从法杯 ·
+                            《法护古迹，盾守文明》
+                        </span>
+
+                    </div>
+
+
+                    <div class="entry-sub">
+                        2026
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="entry-body">
+
+
+                    <p data-lang="en">
+
+                        Analyzed the Tuoshan Grottoes
+                        administrative
+                        public-interest litigation case
+
+                        through statutory research,
+                        case analysis,
+                        questionnaires
+
+                        and interviews
+                        with courts
+                        and government authorities.
+
+                    </p>
+
+
+                    <p data-lang="en">
+
+                        Examined procedural
+                        suspension/resumption,
+
+                        regulatory delay
+
+                        and inter-agency coordination,
+
+                        and proposed
+                        continuing supervision
+                        and cross-agency cooperation.
+
+                    </p>
+
+
+                    <p data-lang="zh">
+
+                        以驼山石窟行政公益诉讼案为样本，
+
+                        结合规范检索、
+                        案例分析、
+                        问卷
+
+                        及法院、
+                        文旅局、
+                        司法局访谈，
+
+                        分析中止与恢复审查、
+                        监管迟滞
+                        及专业协同等实务问题。
+
+                    </p>
+
+
+                    <p data-lang="zh">
+
+                        提出动态跟进、
+                        跨部门协同
+                        与长期监督等完善建议。
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EDUCATION
+     ===================================================== -->
+
+<section
+    class="page"
+    id="education"
+>
+
+    <div class="page-wrap">
+
+
+        <div class="section-head">
+
+
+            <div class="section-index">
+                03 — EDUCATION
+            </div>
+
+
+            <div>
+
+
+                <div class="kicker">
+
+                    <span data-lang="en">
+                        Academic Background
+                    </span>
+
+                    <span data-lang="zh">
+                        教育背景
+                    </span>
+
+                </div>
+
+
+                <h2 class="display">
+
+                    <span data-lang="en">
+                        Education
+                    </span>
+
+                    <span data-lang="zh">
+                        教育
+                    </span>
+
+                </h2>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="education-grid">
+
+
+            <section class="edu-card">
+
+
+                <h3>
+
+                    <span data-lang="en">
+                        Wuhan University ·
+                        School of Law
+                    </span>
+
+                    <span data-lang="zh">
+                        武汉大学 ·
+                        法学院
+                    </span>
+
+                </h3>
+
+
+                <div class="date">
+
+                    <span data-lang="en">
+                        Sep 2024 —
+                        Jun 2028
+                        (Expected)
+                    </span>
+
+                    <span data-lang="zh">
+                        2024.09 —
+                        2028.06（预计）
+                    </span>
+
+                </div>
+
+
+                <div class="fact-row">
+
+
+                    <div class="fact-label">
+
+                        <span data-lang="en">
+                            Program
+                        </span>
+
+                        <span data-lang="zh">
+                            专业
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <span data-lang="en">
+                            International Law
+                            Experimental Program
+                        </span>
+
+                        <span data-lang="zh">
+                            法学（国际法实验班）
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="fact-row">
+
+
+                    <div class="fact-label">
+
+                        <span data-lang="en">
+                            Average
+                        </span>
+
+                        <span data-lang="zh">
+                            平均成绩
+                        </span>
+
+                    </div>
+
+
+                    <div>
+                        89.34 / 100
+                    </div>
+
+
+                </div>
+
+
+                <div class="fact-row">
+
+
+                    <div class="fact-label">
+
+                        <span data-lang="en">
+                            Selected Courses
+                        </span>
+
+                        <span data-lang="zh">
+                            主要课程
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <span data-lang="en">
+
+                            International Economic Law 99 ·
+                            Jurisprudence 94 ·
+                            Property Law 94 ·
+                            LEC 95 ·
+                            Environmental Law 93 ·
+                            Civil Procedure Law 90
+
+                        </span>
+
+
+                        <span data-lang="zh">
+
+                            国际经济法 99 ·
+                            法理学 94 ·
+                            物权法 94 ·
+                            LEC 95 ·
+                            环境法 93 ·
+                            民事诉讼法 90
+
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <section class="edu-card">
+
+
+                <h3>
+
+                    <span data-lang="en">
+                        Wuhan University ·
+                        Business & Digital Entrepreneurship
+                    </span>
+
+                    <span data-lang="zh">
+                        武汉大学 ·
+                        工商管理与数智创业微专业
+                    </span>
+
+                </h3>
+
+
+                <div class="date">
+
+                    <span data-lang="en">
+                        Sep 2025 —
+                        Sep 2027
+                        (Expected)
+                    </span>
+
+                    <span data-lang="zh">
+                        2025.09 —
+                        2027.09（预计）
+                    </span>
+
+                </div>
+
+
+                <div class="fact-row">
+
+
+                    <div class="fact-label">
+
+                        <span data-lang="en">
+                            Average
+                        </span>
+
+                        <span data-lang="zh">
+                            平均成绩
+                        </span>
+
+                    </div>
+
+
+                    <div>
+                        88 / 100
+                    </div>
+
+
+                </div>
+
+
+                <div class="fact-row">
+
+
+                    <div class="fact-label">
+
+                        <span data-lang="en">
+                            Coursework
+                        </span>
+
+                        <span data-lang="zh">
+                            课程
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <span data-lang="en">
+
+                            Accounting ·
+                            Business Model Design ·
+                            Entrepreneurship Operations Simulation
+
+                        </span>
+
+
+                        <span data-lang="zh">
+
+                            会计学 ·
+                            商业模式设计 ·
+                            创业运营模拟
+
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="fact-row">
+
+
+                    <div class="fact-label">
+
+                        <span data-lang="en">
+                            Field Research
+                        </span>
+
+                        <span data-lang="zh">
+                            企业调研
+                        </span>
+
+                    </div>
+
+
+                    <div>
+                        BYD · Douku
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+
+
+        <div class="skills-bar">
+
+
+            <div class="skill-block">
+
+
+                <h4>
+
+                    <span data-lang="en">
+                        English
+                    </span>
+
+                    <span data-lang="zh">
+                        英语
+                    </span>
+
+                </h4>
+
+
+                <p>
+
+                    CET-4 596
+                    <br>
+
+                    CET-6 567
+                    <br>
+
+                    <span data-lang="en">
+                        English legal research & writing
+                    </span>
+
+                    <span data-lang="zh">
+                        英文法律检索与写作
+                    </span>
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="skill-block">
+
+
+                <h4>
+
+                    <span data-lang="en">
+                        Legal Research
+                    </span>
+
+                    <span data-lang="zh">
+                        法律检索
+                    </span>
+
+                </h4>
+
+
+                <p>
+
+                    HeinOnline
+                    <br>
+
+                    Google Scholar
+                    <br>
+
+                    PKULaw ·
+                    Wolters Kluwer China
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="skill-block">
+
+
+                <h4>
+
+                    <span data-lang="en">
+                        Technical
+                    </span>
+
+                    <span data-lang="zh">
+                        办公技能
+                    </span>
+
+                </h4>
+
+
+                <p>
+
+                    Word · Excel
+                    <br>
+
+                    PowerPoint · XMind
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ACTIVITIES
+     ===================================================== -->
+
+<section
+    class="page"
+    id="activities"
+>
+
+    <div class="page-wrap">
+
+
+        <div class="section-head">
+
+
+            <div class="section-index">
+                04 — ACTIVITIES
+            </div>
+
+
+            <div>
+
+
+                <div class="kicker">
+
+                    <span data-lang="en">
+                        Leadership & Activities
+                    </span>
+
+                    <span data-lang="zh">
+                        校园与社会实践
+                    </span>
+
+                </div>
+
+
+                <h2 class="display">
+
+                    <span data-lang="en">
+                        Activities
+                    </span>
+
+                    <span data-lang="zh">
+                        实践经历
+                    </span>
+
+                </h2>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="entries">
+
+
+            <article class="entry">
+
+
+                <div>
+
+
+                    <div class="entry-title">
+
+                        <span data-lang="en">
+                            Wuhan University
+                            Entrepreneurship
+                            Promotion Center
+                        </span>
+
+                        <span data-lang="zh">
+                            武汉大学创业促进中心
+                        </span>
+
+                    </div>
+
+
+                    <div class="entry-sub">
+
+                        <span data-lang="en">
+                            Organizing Committee Member
+                            · Sep 2024 — Jun 2026
+                        </span>
+
+                        <span data-lang="zh">
+                            创新大赛组职委
+                            · 2024.09 — 2026.06
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="entry-body">
+
+
+                    <p data-lang="en">
+
+                        Supported the campus-level
+                        China International “Internet+”
+                        Innovation and Entrepreneurship Competition,
+
+                        including event preparation,
+                        participant information management,
+
+                        on-site execution
+                        and Excel-based tracking.
+
+                    </p>
+
+
+                    <p data-lang="zh">
+
+                        参与中国国际“互联网+”
+                        大学生创新创业大赛校内赛事组织，
+
+                        协助赛事筹备、
+                        项目材料及参赛信息管理、
+                        现场执行，
+
+                        并使用 Excel
+                        进行项目资料整理、
+                        统计与信息维护。
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <article class="entry">
+
+
+                <div>
+
+
+                    <div class="entry-title">
+
+                        <span data-lang="en">
+                            Quantang Dream-Building
+                            Volunteer Teaching Team
+                        </span>
+
+                        <span data-lang="zh">
+                            武汉大学泉塘筑梦支教队
+                        </span>
+
+                    </div>
+
+
+                    <div class="entry-sub">
+
+                        <span data-lang="en">
+                            Head of Publicity
+                            · Jul 2025 — Aug 2025
+                        </span>
+
+                        <span data-lang="zh">
+                            宣传组负责人
+                            · 2025.07 — 2025.08
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="entry-body">
+
+
+                    <p data-lang="en">
+
+                        Taught English
+                        and basic legal courses
+                        and led publicity.
+
+                        The team was selected
+                        as an Outstanding Summer
+                        Social Practice Project
+
+                        and received
+                        a related national first prize.
+
+                    </p>
+
+
+                    <p data-lang="zh">
+
+                        承担英语及法律课程授课
+                        与宣传工作；
+
+                        所在团队获
+                        学生暑期社会实践
+                        校级精品立项
+                        及相关全国一等奖。
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <article class="entry">
+
+
+                <div>
+
+
+                    <div class="entry-title">
+
+                        <span data-lang="en">
+                            Honors
+                        </span>
+
+                        <span data-lang="zh">
+                            荣誉奖项
+                        </span>
+
+                    </div>
+
+
+                    <div class="entry-sub">
+
+                        <span data-lang="en">
+                            Selected
+                        </span>
+
+                        <span data-lang="zh">
+                            部分
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="entry-body">
+
+
+                    <p data-lang="en">
+
+                        Second-Class Scholarship
+                        for 2024 Freshmen ·
+
+                        Outstanding Communist
+                        Youth League Member, 2025 ·
+
+                        Third Place (Team),
+                        Go,
+                        Wuhan University
+                        Mind Sports Games.
+
+                    </p>
+
+
+                    <p data-lang="zh">
+
+                        武汉大学 2024 级
+                        新生乙等奖学金 ·
+
+                        2025 武汉大学
+                        优秀共青团员 ·
+
+                        武汉大学智力运动会
+                        围棋项目团体总分第三。
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+     ===================================================== -->
+
+<section
+    class="page"
+    id="contact"
+>
+
+    <div class="page-wrap">
+
+
+        <div class="contact-layout">
+
+
+            <div>
+
+
+                <div class="kicker">
+
+                    <span data-lang="en">
+                        Contact
+                    </span>
+
+                    <span data-lang="zh">
+                        联系方式
+                    </span>
+
+                </div>
+
+
+                <div class="contact-big">
+
+                    <span data-lang="en">
+
+                        Thank you for
+                        <br>
+                        visiting.
+
+                    </span>
+
+
+                    <span data-lang="zh">
+
+                        感谢浏览
+                        <br>
+                        我的主页
+
+                    </span>
+
+                </div>
+
+
+                <div class="contact-note">
+
+                    <span data-lang="en">
+
+                        I am currently studying
+                        at Wuhan University School of Law
+
+                        and expect to graduate
+                        in June 2028.
+
+                    </span>
+
+
+                    <span data-lang="zh">
+
+                        现就读于武汉大学法学院
+                        法学（国际法实验班），
+
+                        预计于
+                        2028 年 6 月毕业。
+
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="contact-card">
+
+
+                <div class="contact-row">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <span>
+
+                        <a href="mailto:luanyuemily@163.com">
+                            luanyuemily@163.com
+                        </a>
+
+                    </span>
+
+                </div>
+
+
+                <div class="contact-row">
+
+                    <span>
+
+                        <span data-lang="en">
+                            Phone
+                        </span>
+
+                        <span data-lang="zh">
+                            电话
+                        </span>
+
+                    </span>
+
+
+                    <span>
+
+                        <a href="tel:+8615303646002">
+                            +86 153 0364 6002
+                        </a>
+
+                    </span>
+
+                </div>
+
+
+                <div class="contact-row">
+
+                    <span>
+
+                        <span data-lang="en">
+                            University
+                        </span>
+
+                        <span data-lang="zh">
+                            学校
+                        </span>
+
+                    </span>
+
+
+                    <span>
+
+                        <span data-lang="en">
+                            Wuhan University School of Law
+                        </span>
+
+                        <span data-lang="zh">
+                            武汉大学法学院
+                        </span>
+
+                    </span>
+
+                </div>
+
+
+                <div class="contact-row">
+
+                    <span>
+
+                        <span data-lang="en">
+                            Focus
+                        </span>
+
+                        <span data-lang="zh">
+                            方向
+                        </span>
+
+                    </span>
+
+
+                    <span>
+
+                        <span data-lang="en">
+                            Legal Research ·
+                            International Law ·
+                            TMT
+                        </span>
+
+                        <span data-lang="zh">
+                            法律研究 ·
+                            国际法 ·
+                            TMT
+                        </span>
+
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<div class="footer-note">
+
+    <span>
+        © 2026 Yu Luan
+    </span>
+
+    <span>
+
+        <span data-lang="en">
+            Personal Legal Profile
+        </span>
+
+        <span data-lang="zh">
+            个人法律主页
+        </span>
+
+    </span>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     页面切换 + 中英文切换
+     ===================================================== -->
+
+<script>
+
+/* 所有页面 */
+
+const pages =
+    [...document.querySelectorAll(".page")];
+
+
+/* 所有可以切换页面的按钮 */
+
+const pageButtons =
+    [...document.querySelectorAll("[data-page-target]")];
+
+
+/* 顶部菜单 */
+
+const topNav =
+    document.getElementById("topNav");
+
+
+/* 手机菜单按钮 */
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+
+/* 中英文按钮 */
+
+const langSwitch =
+    document.getElementById("langSwitch");
+
+
+
+/* =====================================================
+   PAGE SWITCH
+   ===================================================== */
+
+function showPage(id, updateHash = true) {
+
+    const target =
+        document.getElementById(id)
+            ? id
+            : "home";
+
+
+    pages.forEach(page => {
+
+        page.classList.toggle(
+            "active",
+            page.id === target
+        );
+
+    });
+
+
+    document
+        .querySelectorAll(".nav-btn")
+        .forEach(button => {
+
+            button.classList.toggle(
+                "active",
+                button.dataset.pageTarget === target
+            );
+
+        });
+
+
+    topNav.classList.remove("open");
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "instant"
+    });
+
+
+    if (updateHash) {
+
+        history.replaceState(
+            null,
+            "",
+            "#" + target
+        );
+
+    }
+
+}
+
+
+
+/* =====================================================
+   CLICK
+   ===================================================== */
+
+pageButtons.forEach(element => {
+
+    element.addEventListener(
+        "click",
+        function () {
+
+            showPage(
+                element.dataset.pageTarget
+            );
+
+        }
+    );
+
+});
+
+
+
+/* =====================================================
+   MOBILE MENU
+   ===================================================== */
+
+menuToggle.addEventListener(
+    "click",
+    function () {
+
+        topNav.classList.toggle("open");
+
+    }
+);
+
+
+
+/* =====================================================
+   LANGUAGE SWITCH
+   ===================================================== */
+
+langSwitch.addEventListener(
+    "click",
+    function () {
+
+
+        document.body
+            .classList
+            .toggle("zh");
+
+
+        const chineseMode =
+            document.body
+                .classList
+                .contains("zh");
+
+
+        langSwitch.textContent =
+            chineseMode
+                ? "EN"
+                : "中文";
+
+
+        document.documentElement.lang =
+            chineseMode
+                ? "zh-CN"
+                : "en";
+
+    }
+);
+
+
+
+/* =====================================================
+   OPEN CORRECT PAGE
+   ===================================================== */
+
+const initialPage =
+    location.hash.replace("#", "")
+    || "home";
+
+
+showPage(
+    initialPage,
+    false
+);
+
+
+
+/* 浏览器前进后退 */
+
+window.addEventListener(
+    "hashchange",
+    function () {
+
+        showPage(
+            location.hash.replace("#", "")
+            || "home",
+            false
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+</html>
